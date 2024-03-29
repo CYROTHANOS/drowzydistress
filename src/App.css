@@ -17,14 +17,20 @@
   padding: 20px;
   color: white;
   text-align: center;
+  width: 100%; /* Ensure the header spans the full width */
 }
 
 /* Style the main content */
 .App-main {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 640px; /* Limit the width of the content */
-  text-align: center;
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%; /* Ensure the main content spans the full width */
+}
+
+/* Style the iframe container */
+.iframe-container {
+  flex: 1; /* Grow to take remaining space */
+  margin-right: 20px; /* Add spacing between the iframe and timer */
 }
 
 /* Style the iframe */
@@ -32,8 +38,44 @@ iframe {
   border: none; /* Remove border */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
-  width: 100%; /* Ensure the iframe takes up the full width */
+  width: 640px; /* Ensure the iframe takes up the full width */
   height: 480px; /* Set fixed height */
   max-width: 100%; /* Ensure the iframe doesn't exceed its container's width */
   overflow: hidden; /* Prevent scrolling within the iframe */
+  margin-left: 200px;
+  margin-right: 100px;
+  margin-top: 30px;
+}
+
+/* Style the timer container */
+.timer-container {
+  width: 200px; /* Set fixed width for timer */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  margin-top: 145px;
+  margin-right: 200px;
+}
+
+/* Style the timer */
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style the button */
+button {
+  margin-top: 20px; /* Add space above the button */
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Set font size */
+  background-color: #8b4513; /* Brown background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+  background-color: #654321; /* Darker brown background color on hover */
 }
